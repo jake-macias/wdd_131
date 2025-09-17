@@ -2,7 +2,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
-p {
+.drarktext {
     background-attachment: #333;
     color: white;
 }
