@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  img {
+    max-width: 200px;
+    margin: 20px 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 5px 0;
+    font-weight: bold;
+  }
+  
+  /* Dark Theme */
+  body.dark {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+  }
+  
+  body.dark ul li {
+    color: #f0f0f0;
+  }
+  
