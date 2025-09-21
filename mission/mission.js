@@ -5,8 +5,7 @@ document.body.appendChild(missionParagraph);
 
 const newImage = document.createElement("img");
 newImage.setAttribute("alt", "BYU–Idaho Logo");
-newImage.src =
-  "https://www.byui.edu/images/service-sites/map/byui-logo_blue.jpg"; // default: blue logo
+newImage.src = "logo.png";
 document.body.appendChild(newImage);
 
 const values = ["Faith", "Integrity", "Excellence"];
@@ -26,14 +25,11 @@ const themeSelector = document.querySelector("#theme");
 
 function changeTheme() {
   if (themeSelector.value === "dark") {
-
     document.body.classList.add("dark");
-    newImage.src =
-      "https://www.byui.edu/images/service-sites/map/byui-logo_white.png";
+    newImage.src = "logo.png";
   } else {
     document.body.classList.remove("dark");
-    newImage.src =
-      "https://www.byui.edu/images/service-sites/map/byui-logo_blue.jpg";
+    newImage.src = "logo.png";
   }
 }
 
