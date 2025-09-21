@@ -22,20 +22,19 @@ valuesDiv.innerHTML = `
 `;
 document.body.appendChild(valuesDiv);
 
-const themeSelector = document.querySelector("#theme"); // dropdown element
+const themeSelector = document.querySelector("#theme"); 
 
 function changeTheme() {
   if (themeSelector.value === "dark") {
 
     document.body.classList.add("dark");
     newImage.src =
-      "https://www.byui.edu/images/service-sites/map/byui-logo_white.png"; // white logo
+      "https://www.byui.edu/images/service-sites/map/byui-logo_white.png";
   } else {
     document.body.classList.remove("dark");
     newImage.src =
-      "https://www.byui.edu/images/service-sites/map/byui-logo_blue.jpg"; // blue logo
+      "https://www.byui.edu/images/service-sites/map/byui-logo_blue.jpg";
   }
 }
 
-// Listen for theme changes
 themeSelector.addEventListener("change", changeTheme);
