@@ -21,13 +21,41 @@ body {
     font-weight: bold;
   }
   
-  /* Dark Theme */
   body.dark {
     background-color: #1a1a1a;
     color: #f0f0f0;
+
   }
   
   body.dark ul li {
     color: #f0f0f0;
   }
   
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  header, main, footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: #e6f2ff;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  
+  section {
+    padding: 1rem;
+    background-color: #fff;
+  }
+
+  .dark header, .dark main, .dark footer {
+    background-color: #002975;
+  }
+
+  @media (max-width: 500px) 
