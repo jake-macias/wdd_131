@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+  --primary-color: #52489c;
+  --secondary-color: #59c3c3;
+  --accent-color: #f45b69;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: Mooli, sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+  margin: 0;
+  background: var(--text-light);
+  color: var(--text-dark);
+}
+
+header, footer {
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 1em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-family: var(--secondary-font);
+  margin: 0;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+#menuButton {
+  background: var(--secondary-color);
+  border: none;
+  color: var(--text-light);
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  padding: 1em;
+}
+
+h2 {
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (min-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  #menuButton {
+    display: none;
+  }
+  nav {
+    flex-direction: row;
+    gap: 1em;
+  }
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.viewer {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.viewer img {
+  max-height: 90%;
+  max-width: 90%;
+  border-radius: 10px;
+}
+
+.close-viewer {
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  padding: 0.3em 0.6em;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
