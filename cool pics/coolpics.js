@@ -29,8 +29,7 @@ function viewHandler(event) {
   if (event.target.tagName === "IMG") {
     let thumbSrc = event.target.getAttribute("src");
     let alt = event.target.getAttribute("alt");
-    let largeSrc = thumbSrc.replace("-sm", "-lg");
-
+    let largeSrc = thumbSrc.replace("-sm", "-full");
     document.body.insertAdjacentHTML("afterbegin", popupTemplate(largeSrc, alt));
 
     document.querySelector(".close-popup")
