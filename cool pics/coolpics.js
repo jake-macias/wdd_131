@@ -16,7 +16,6 @@ function handleResize() {
 window.addEventListener("resize", handleResize);
 window.addEventListener("load", handleResize);
 
-
 function popupTemplate(src, alt) {
   return `
     <div class="popup" style="display:flex">
@@ -26,19 +25,17 @@ function popupTemplate(src, alt) {
   `;
 }
 
-
 function viewHandler(event) {
   if (event.target.tagName === "IMG") {
-    let src = event.target.getAttribute("src");
+    let thumbSrc = event.target.getAttribute("src");
     let alt = event.target.getAttribute("alt");
+    let largeSrc = thumbSrc.replace("-sm", "-lg");
 
-    document.body.insertAdjacentHTML("afterbegin", popupTemplate(src, alt));
+    document.body.insertAdjacentHTML("afterbegin", popupTemplate(largeSrc, alt));
 
-    
     document.querySelector(".close-popup")
       .addEventListener("click", closePopup);
 
- 
     document.querySelector(".popup")
       .addEventListener("click", function(e) {
         if (e.target.classList.contains("popup")) {
