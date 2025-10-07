@@ -1,61 +1,147 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  img {
-    max-width: 200px;
-    margin: 20px 0;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  ul li {
-    margin: 5px 0;
-    font-weight: bold;
-  }
-  
-  body.dark {
-    background-color: #1a1a1a;
-    color: #f0f0f0;
+  font-family: 'Times New Roman', serif;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: left;
+  padding: 40px 20px;
+  line-height: 1.4;
+  font-size: 12pt;
+  margin: 0;
+}
 
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 24pt;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+}
+
+.university-title {
+  font-size: 14pt;
+  font-weight: normal;
+  text-align: center;
+  color: #0033A0;
+  margin: 0 0 30px 0;
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 15px 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+ol {
+  margin: 0 0 40px 20px;
+  padding: 0;
+  list-style-position: outside;
+}
+
+ol li {
+  margin: 10px 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.logo .byu {
+  font-size: 48pt;
+  font-weight: bold;
+  color: #0033A0;
+  margin: 0;
+  display: block;
+}
+
+.logo .idaho {
+  font-size: 24pt;
+  font-weight: bold;
+  color: #0033A0;
+  margin: 0;
+  display: block;
+}
+
+img {
+  max-width: 200px;
+  margin: 20px 0;
+}
+
+body.dark {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark .container {
+  background-color: #2a2a2a;
+  border-color: #555;
+}
+
+body.dark .university-title,
+body.dark .logo .byu,
+body.dark .logo .idaho {
+  color: #4a90e2;
+}
+
+body.dark ol li {
+  color: #f0f0f0;
+}
+
+header, main, footer {
+  max-width: 640px;
+  margin: 1rem auto;
+  border: 1px solid #bbb;
+  padding: 1rem;
+  background-color: #e6f2ff;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+section {
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.dark header, .dark main, .dark footer {
+  background-color: #002975;
+}
+
+@media (max-width: 500px) {
+  .container {
+      padding: 20px;
+      margin: 10px;
   }
   
-  body.dark ul li {
-    color: #f0f0f0;
+  h1 {
+      font-size: 20pt;
+  }
+  
+  .logo .byu {
+      font-size: 36pt;
+  }
+  
+  .logo .idaho {
+      font-size: 18pt;
   }
   
   body {
-    font-family: 'Roboto', sans-serif;
+      padding: 20px 10px;
   }
-  
-  header, main, footer {
-    max-width: 640px;
-    margin: 1rem auto;
-    border: 1px solid #bbb;
-    padding: 1rem;
-    background-color: #e6f2ff;
-  }
-  
-  main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-  }
-  
-  section {
-    padding: 1rem;
-    background-color: #fff;
-  }
-
-  .dark header, .dark main, .dark footer {
-    background-color: #002975;
-  }
-
-  @media (max-width: 500px)
+}
