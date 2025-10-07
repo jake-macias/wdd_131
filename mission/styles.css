@@ -3,13 +3,13 @@ body {
   background-color: #ffffff;
   color: #000000;
   text-align: left;
-  padding: 40px 20px;
+  padding: 0;
   line-height: 1.4;
   font-size: 12pt;
   margin: 0;
 }
 
-.container {
+body > * {
   max-width: 800px;
   margin: 0 auto;
   border: 1px solid #ccc;
@@ -18,7 +18,16 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-h1 {
+header {
+  text-align: center;
+  border: none;
+  padding: 20px;
+  background: none;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+header h1 {
   font-size: 24pt;
   font-weight: bold;
   text-align: center;
@@ -27,31 +36,92 @@ h1 {
   letter-spacing: 1px;
 }
 
-.university-title {
+header h2 {
   font-size: 14pt;
   font-weight: normal;
   text-align: center;
   color: #0033A0;
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 0;
   font-style: italic;
 }
 
-p {
+#theme {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 12pt;
+}
+
+main {
+  border: none;
+  padding: 0 40px 40px 40px;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+}
+
+main p {
   margin: 0 0 15px 0;
   text-align: justify;
   hyphens: auto;
 }
 
-ol {
+main ul {
   margin: 0 0 40px 20px;
   padding: 0;
+  list-style-type: decimal;
   list-style-position: outside;
 }
 
-ol li {
+main ul li {
   margin: 10px 0;
   text-align: justify;
   hyphens: auto;
+}
+
+footer {
+  text-align: center;
+  border: none;
+  padding: 20px;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+}
+
+footer p {
+  margin: 0 0 20px 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+footer img {
+  max-width: 200px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.values {
+  margin: 20px 0;
+}
+
+.values h3 {
+  font-size: 16pt;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.values ul {
+  list-style-type: disc;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.values ul li {
+  margin: 5px 0;
+  font-weight: bold;
+  text-align: left;
 }
 
 .logo {
@@ -75,62 +145,49 @@ ol li {
   display: block;
 }
 
-img {
-  max-width: 200px;
-  margin: 20px 0;
-}
-
 body.dark {
   background-color: #1a1a1a;
   color: #f0f0f0;
 }
 
-body.dark .container {
+body.dark > * {
   background-color: #2a2a2a;
   border-color: #555;
+  color: #f0f0f0;
 }
 
-body.dark .university-title,
+body.dark header h2,
 body.dark .logo .byu,
 body.dark .logo .idaho {
   color: #4a90e2;
 }
 
-body.dark ol li {
+body.dark main ul li,
+body.dark footer p {
   color: #f0f0f0;
 }
 
-header, main, footer {
-  max-width: 640px;
-  margin: 1rem auto;
-  border: 1px solid #bbb;
-  padding: 1rem;
-  background-color: #e6f2ff;
-}
-
-main {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 1rem;
-}
-
-section {
-  padding: 1rem;
-  background-color: #fff;
-}
-
-.dark header, .dark main, .dark footer {
-  background-color: #002975;
+body.dark .values h3,
+body.dark .values ul li {
+  color: #f0f0f0;
 }
 
 @media (max-width: 500px) {
-  .container {
+  body > * {
       padding: 20px;
       margin: 10px;
   }
   
-  h1 {
+  header h1 {
       font-size: 20pt;
+  }
+  
+  header h2 {
+      font-size: 12pt;
+  }
+  
+  main {
+      padding: 0 20px 20px 20px;
   }
   
   .logo .byu {
@@ -141,7 +198,7 @@ section {
       font-size: 18pt;
   }
   
-  body {
-      padding: 20px 10px;
+  #theme {
+      font-size: 10pt;
   }
 }
