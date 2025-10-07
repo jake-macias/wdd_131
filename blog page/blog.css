@@ -7,15 +7,7 @@ body {
     background: #fafafa;
 }
 
-h1, h2 {
-    font-family: 'Lora', serif;
-    color: #AF1B3F;
-}
 
-a {
-    color: #AF1B3F;
-    text-decoration: none;
-}
 
 a:focus {
     outline: 2px solid #EFC69B;
