@@ -1,0 +1,151 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #473144;
+    margin: 0;
+    background: #fafafa;
+}
+
+h1, h2 {
+    font-family: 'Lora', serif;
+    color: #AF1B3F;
+}
+
+a {
+    color: #AF1B3F;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 2px solid #EFC69B;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #AF1B3F;
+    color: white;
+    padding: 8px;
+}
+
+.skip-link a:focus {
+    top: 6px;
+}
+
+header {
+    background: #473144;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin: 0 0 10px 0;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 70px 70px 70px;
+    justify-content: end;
+    list-style: none;
+    margin: 10px auto 0;
+    padding: 0;
+    max-width: 800px;
+}
+
+nav a {
+    color: white;
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
+    border-top: 2px solid #EFC69B;
+    border-bottom: 2px solid #EFC69B;
+    text-align: center;
+}
+
+nav a:hover, nav a:focus {
+    background: #EFC69B;
+    color: #473144;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.filters {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #EFC69B;
+    min-height: 200px;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #EFC69B;
+    background: white;
+}
+
+article details {
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 4px solid #AF1B3F;
+}
+
+article summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+article time {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+article dl {
+    margin: 5px 0 0 0;
+}
+
+article dt {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+article dd {
+    margin: 0 0 5px 0;
+}
+
+article h2 {
+    font-size: 1.6em;
+    margin: 0 0 10px 0;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #EFC69B;
+    margin-bottom: 10px;
+}
+
+article p {
+    margin: 10px 0 0 0;
+    line-height: 1.4;
+}
+
+article em {
+    color: #AF1B3F;
+    font-style: italic;
+}
