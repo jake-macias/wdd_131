@@ -100,11 +100,18 @@ footer {
   margin: 0;
 }
 
-.byui-logo {
-  display: block;
-  max-width: 100px; 
+.added-content p {
+  margin: 0 0 20px 0;
+  text-align: justify;
+  hyphens: auto;
+  padding-top: 20px;
+}
+
+.added-content img {
+  max-width: 250px;
   height: auto;
-  margin: 40px auto 20px;
+  margin: 20px auto;
+  display: block;
 }
 
 .values {
@@ -129,6 +136,14 @@ footer {
   margin: 5px 0;
   font-weight: bold;
   text-align: left;
+}
+
+.byui-logo {
+  display: block;
+  width: 100px !important;
+  height: auto !important;
+  margin: 40px auto 0;
+  opacity: 0.95;
 }
 
 body.dark {
@@ -195,10 +210,8 @@ body.dark .values ul li {
       padding: 0 20px 20px 20px;
   }
   
-  /* Slightly smaller logo for mobile */
-  .byui-logo {
-      max-width: 80px;
-      margin: 30px auto 15px;
+  .added-content img {
+      max-width: 200px;
   }
   
   #theme {
