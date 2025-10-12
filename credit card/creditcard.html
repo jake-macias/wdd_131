@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Credit Card Form Validation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.png" />
+</head>
+<body>
+  <main class="container">
+    <h1>Confirm Purchase</h1>
+
+    <form id="cardForm" novalidate>
+      <section class="card-visual">
+        <div class="card card-front" aria-hidden="true">
+          <div class="chip"></div>
+          <div class="card-number" id="visual-number">#### #### #### ####</div>
+          <div class="card-row">
+            <div class="card-name" id="visual-name">CARDHOLDER NAME</div>
+            <div class="card-exp" id="visual-exp">MM/YY</div>
+          </div>
+        </div>
+
+        <div class="card card-back" aria-hidden="true">
+          <div class="mag-strip"></div>
+          <div class="signature-area">
+            <div class="sig-label">CVV</div>
+            <div class="cvv-visual" id="visual-cvv">###</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-fields">
+        <div class="field">
+          <label for="owner">Owner</label>
+          <input id="owner" name="owner" type="text" placeholder="Full Name" required minlength="2" />
+        </div>
+
+        <div class="field">
+          <label for="cardNumber">Card Number</label>
+          <input id="cardNumber" name="cardNumber" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" required />
+        </div>
+
+        <div class="row">
+          <div class="field small">
+            <label for="expMonth">Expiration</label>
+            <div class="exp-row">
+              <select id="expMonth" name="expMonth" required>
+                <option value="">MM</option>
+                <script>
+                  for (let m=1;m<=12;m++){
+                    document.write(`<option value="${String(m).padStart(2,'0')}">${String(m).padStart(2,'0')}</option>`)
+                  }
+                </script>
+              </select>
+              <select id="expYear" name="expYear" required>
+                <option value="">YY</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field small">
+            <label for="cvv">CVV</label>
+            <input id="cvv" name="cvv" inputmode="numeric" maxlength="4" placeholder="123" required />
+          </div>
+        </div>
+
+        <p class="errorMsg" aria-live="polite"></p>
+        <button type="submit" class="submit-btn">Pay Now</button>
+        <p class="successMsg" aria-live="polite"></p>
+      </section>
+    </form>
+  </main>
+
+  <script src="card.js" defer></script>
+</body>
+</html>

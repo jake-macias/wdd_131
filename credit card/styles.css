@@ -1,0 +1,186 @@
+:root {
+    --bg:#f6f7fb;
+    --card-bg:#273043;
+    --card-accent:#f36d21;
+    --card-text:#fff;
+    --muted:#7a7f8a;
+  }
+  
+  * { box-sizing:border-box; }
+  
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: var(--bg);
+    margin: 0;
+    padding: 32px;
+    color: #111;
+  }
+  
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    margin: 0 0 18px 0;
+    font-size: 1.4rem;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  
+  @media (max-width:800px) {
+    form { grid-template-columns: 1fr; }
+  }
+  
+  .card-visual {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 18px;
+  }
+  
+  .card {
+    border-radius: 14px;
+    padding: 18px;
+    color: var(--card-text);
+    min-height: 140px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(10,20,30,0.12);
+  }
+  
+  .card-front {
+    background: linear-gradient(135deg,#334559 0%, #233444 100%);
+  }
+  
+  .card-back {
+    background: linear-gradient(180deg,#222831 0%, #1b2228 100%);
+  }
+  
+  .chip {
+    width: 44px;
+    height: 30px;
+    border-radius: 4px;
+    background: linear-gradient(180deg,#e6e0b3,#bfae5a);
+    box-shadow: inset 0 -2px 0 rgba(255,255,255,0.2);
+    margin-bottom: 12px;
+  }
+  
+  .card-number {
+    font-family: "Courier New", monospace;
+    letter-spacing: 2px;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+  }
+  
+  .card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-name,
+  .card-exp {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.9);
+  }
+  
+  .mag-strip {
+    height: 36px;
+    background: #111;
+    margin-top: 12px;
+    border-radius: 4px;
+  }
+  
+  .signature-area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 14px;
+  }
+  
+  .sig-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-right: 8px;
+  }
+  
+  .cvv-visual {
+    background: #fff;
+    color: #111;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    min-width: 36px;
+    text-align: center;
+  }
+  
+  .form-fields {
+    padding: 12px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(12,18,26,0.06);
+  }
+  
+  .field { margin-bottom: 12px; }
+  
+  .field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  
+  .field input,
+  .field select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #dde1e9;
+    font-size: 0.95rem;
+  }
+  
+  .row {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .small { flex: 1; }
+  
+  .exp-row {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .errorMsg {
+    color: #b00020;
+    min-height: 1.2em;
+    margin: 8px 0;
+  }
+  
+  .successMsg {
+    color: green;
+    min-height: 1.2em;
+    margin: 8px 0;
+    font-weight: 600;
+  }
+  
+  .submit-btn {
+    display: inline-block;
+    margin-top: 6px;
+    background: var(--card-accent);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .submit-btn:active {
+    transform: translateY(1px);
+  }  
