@@ -1,4 +1,6 @@
-<html lang="en-us"><head>
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
     <meta charset="utf-8">
     <title>Site Plan</title>
     <link type="text/css" rel="stylesheet" href="site-plan.css">
@@ -6,9 +8,9 @@
 
 <body>
     <header>
-        <h1>[Site name] Site Plan</h1>
-        <h2>FirstName LastName</h2>
-        <h2>WDD 131-[section]</h2>
+        <h1>RecipeFinder Site Plan</h1>
+        <h2>Jake Macias</h2>
+        <h2>WDD 131.01</h2>
         <!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
     </header>
     <main>
@@ -16,22 +18,31 @@
         <hr>
         <h2>Overview</h2>
         <h3>Purpose</h3>
-        <p>[Your purpose here]</p>
+        <p>
+            The purpose of RecipeFinder is to help users discover recipes based on the ingredients they already have at home. 
+            It allows people to search, filter, and explore meals that fit their preferences or dietary needs while cutting down on food waste.
+        </p>
         <!-- change this -->
 
         <h3>Audience</h3>
-        <p>[Your audience here]</p>
+        <p>
+            RecipeFinder is designed for home cooks, college students, and busy individuals who want to prepare easy and affordable meals. 
+            It is especially useful for people who don’t have time to scroll through long recipe blogs and just want quick, useful ideas.
+        </p>
         <!-- change this -->
 
         <h3>Dynamic elements</h3>
-        <p>[Describe dynamic elements provided by Javascript here]</p>
+        <p>
+            JavaScript will power a live recipe search and filtering system. Users can type in ingredients, select cuisine types, or apply dietary filters such as vegetarian or gluten-free. 
+            The site will display recipe cards that update instantly as filters change. There will also be a “Recipe of the Day” section that rotates daily using JavaScript date logic.
+        </p>
         <!-- change this -->
 
         <hr>
         <h2>Branding</h2>
         <h3>Website Logo</h3>
         <!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
-        <img src="#" alt="Logo image">
+        <img src="logo.png" alt="RecipeFinder logo" width="200">
         <hr>
         <h2>Style Guide</h2>
 
@@ -42,7 +53,9 @@
 
         <!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
         Palette URL:
-        <a href="https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c" target="_blank">https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c</a>
+        <a href="https://coolors.co/ff8c42-3e4a59-fcd581-fafafa-333333" target="_blank">
+            https://coolors.co/ff8c42-3e4a59-fcd581-fafafa-333333
+        </a>
 
         <table class="colors">
             <tbody>
@@ -54,10 +67,10 @@
                 </tr>
                 <!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
                 <tr>
-                    <td class="primary">[#396E94]</td>
-                    <td class="secondary">[#E7C24F]</td>
-                    <td class="accent1">[#A43312]</td>
-                    <td class="accent2"></td>
+                    <td class="primary">#FF8C42</td>
+                    <td class="secondary">#3E4A59</td>
+                    <td class="accent1">#FCD581</td>
+                    <td class="accent2">#FAFAFA</td>
                 </tr>
             </tbody>
         </table>
@@ -68,29 +81,20 @@
         <!-- Choose a font for your paragraphs (body copy) and headlines. What font(s) have you chosen? Why did you choose what you did?  Make sure to review the list of web safe fonts at W3Schools.org as a starting point.  Think also about which of your colors above you might use for background and font colors. -->
 
         <h4>
-            Heading Font: [Font Name here]
+            Heading Font: Montserrat
             <!-- change this -->
         </h4>
         <h4>
-            Paragraph Font: [Font Name here]
+            Paragraph Font: Open Sans
             <!-- change this -->
         </h4>
         <h3>Normal paragraph example</h3>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.
+            RecipeFinder helps you discover delicious meals that match your ingredients, saving you time and money. Find inspiration and start cooking with confidence today.
         </p>
         <h3>Colored paragraph example</h3>
         <p class="colored">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.
+            Turn whats already in your kitchen into something amazing with RecipeFinder.
         </p>
 
         <!-- ------------------------Step 10------------------------------ -->
@@ -99,36 +103,47 @@
         <!-- Think about how you want your navigation bar to look. In the site-plan.css file change the colors to your colors to get the look you desire. -->
         <nav>
             <a href="#">Home</a>
-            <a href="#">Page2</a>
-            <a href="#">Page3</a>
+            <a href="#">Browse Recipes</a>
+            <a href="#">About</a>
         </nav>
         <hr>
 
         <h2>Content</h2>
         <h3>Home page</h3>
-        <p>[content, images, data for the home page]</p>
-        <h3>[Page 2]</h3>
-        <p>[content, images, data for the subpage]</p>
+        <p>
+            The home page will introduce the site with a short description and a search bar for ingredients. 
+            It will also feature a “Recipe of the Day” card and a few quick category links such as “30-Minute Meals,” “Vegetarian,” and “Popular Dishes.”
+        </p>
+
+        <h3>Browse Recipes Page</h3>
+        <p>
+            This page will display all available recipes as cards, each showing a title, image, and short description. 
+            Users can use filters or a search bar to find specific types of meals. Clicking a card reveals full recipe details with steps and ingredients.
+        </p>
+
+        <h3>About Page</h3>
+        <p>
+            The About page will include a short background story on why the site was created, how it helps people reduce food waste, and a contact form for feedback.
+        </p>
+
         <h2>Wireframes</h2>
         <p>
-            Create two wireframes for your site. One for each page and list them
-            here
+            Create two wireframes for your site. One for each page and list them here
         </p>
 
         <h3>Home</h3>
         <p>
-            [Any additional details about home that the wireframe does not make
-            clear]
+            The Home page wireframe includes the logo and nav at the top, a hero section with the search bar, followed by featured recipe cards and a footer.
+            [Any additional details about home that the wireframe does not make clear]
         </p>
-        <img src="#" alt="home page wireframe">
+        <img src="wireframe.png" alt="home page wireframe">
 
-        <h3>[Page 2]</h3>
+        <h3>Browse Recipes Page</h3>
         <p>
-            [Any additional details about page 2 that the wireframe does not make
-            clear]
+            The Browse Recipes wireframe shows a filter sidebar on the left, recipe grid on the right, and a simple layout that adapts for mobile.
+            [Any additional details about page 2 that the wireframe does not make clear]
         </p>
-        <img src="#" alt="page 2 wireframe">
+        <img src="browse_wireframe.png" alt="page 2 wireframe">
     </main>
-
-
-</body></html>
+</body>
+</html>
