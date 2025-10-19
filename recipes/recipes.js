@@ -278,4 +278,41 @@ const recipes = [
 		recipeYield: '12 servings',
 		rating: 4
 	}
-]
+];
+
+const searchForm = document.getElementById("searchForm");
+const searchInput = document.getElementById("searchInput");
+const recipesContainer = document.getElementById("recipesContainer");
+
+function displayRecipes(filteredRecipes) {
+	recipesContainer.innerHTML = '';
+	if (filteredRecipes.length === 0) {
+		recipesContainer.innerHTML = '<p>No recipes found.</p>';
+		return;
+	}
+	filteredRecipes.forEach(recipe => {
+		const recipeCard = document.createElement('div');
+		recipeCard.classList.add('recipe-card');
+		recipeCard.innerHTML = `
+			<h2>${recipe.name}</h2>
+			<img src="${recipe.image}" alt="${recipe.name}">
+			<p>${recipe.description}</p>
+			<p><strong>Rating:</strong> ${recipe.rating} ⭐</p>
+		`;
+		recipesContainer.appendChild(recipeCard);
+	});
+}
+
+function searchRecipes(event) {
+	event.preventDefault();
+	const searchTerm = searchInput.value.toLowerCase();
+	const filteredRecipes = recipes.filter(recipe =>
+		recipe.name.toLowerCase().includes(searchTerm) ||
+		recipe.description.toLowerCase().includes(searchTerm) ||
+		recipe.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+	);
+	displayRecipes(filteredRecipes);
+}
+
+searchForm.addEventListener("submit", searchRecipes);
+displayRecipes(recipes);

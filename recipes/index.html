@@ -3,37 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A collection of delicious, easy-to-make recipes for every occasion. Find, cook, and share your favorites!" />
-  <title>Recipe Book | Home</title>
-  <meta property="og:title" content="Recipe Book" />
+  <meta name="description" content="A collection of delicious, easy-to-make recipes." />
+  <title>Recipe Book</title>
+  <meta property="og:title" content="Recipe Book - Delicious Recipes for Everyone" />
   <meta property="og:type" content="website" />
-  <meta property="og:description" content="Explore and share delicious recipes from around the world." />
-  <meta property="og:image" content="images/apple-crisp.jpg" />
-  <meta property="og:url" content="https://your-recipe-site-url.com" />
+  <meta property="og:description" content="Explore easy and tasty recipes for all occasions. Search and discover your next favorite dish!" />
+  <meta property="og:image" content="images/recipe-book.png" />
+  <meta property="og:url" content="https://yourdomain.com/index.html" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="recipes.css" />
-  <script src="recipes.js" defer></script>
+  <script defer src="recipes.js"></script>
 </head>
 <body>
   <header>
-    <img src="images/recipe-book.png" alt="Recipe Book Logo" class="logo" />
-    <h1>Recipe Book</h1>
+    <div class="logo">
+      <img src="images/recipe-book.png" alt="recipe book logo" />
+      <h1>Recipe Book</h1>
+    </div>
     <form id="searchForm">
-      <input type="text" id="searchInput" placeholder="Search recipes..." aria-label="Search recipes" />
-      <button id="searchBtn" type="submit">Search</button>
+      <input type="text" id="searchInput" placeholder="Search recipes..." />
+      <button type="submit">Search</button>
     </form>
   </header>
-  <main id="recipes"></main>
+
+  <main>
+    <section id="recipesContainer"></section>
+  </main>
+
   <footer>
     <div class="social">
-      <a href="#"><img src="images/instagram_icon.svg" alt="Instagram icon" /></a>
-      <a href="#"><img src="images/youtube_icon.svg" alt="YouTube icon" /></a>
-      <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest icon" /></a>
+      <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon" /></a>
+      <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon" /></a>
+      <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon" /></a>
     </div>
     <p style="font-size: 0.6em;">
-      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">
-        Recipe icons created by Freepik - Flaticon
-      </a>
+      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
     </p>
   </footer>
 </body>
