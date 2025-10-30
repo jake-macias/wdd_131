@@ -70,8 +70,6 @@ const recipes = [
       description: "Sopa ligera con lima, pollo y tiras de tortilla."
     }
   ];
-  
-  // Local Storage favorites
   const getFavorites = () => JSON.parse(localStorage.getItem("favorites")) || [];
   const setFavorites = (fav) => localStorage.setItem("favorites", JSON.stringify(fav));
   
